@@ -4,10 +4,10 @@ FROM node:18
 WORKDIR /app
 
 # frontend ディレクトリ内の package.json を想定
-COPY ./frontend/package*.json ./
+COPY ./port_folio/package*.json ./
 RUN npm install
 
-COPY ./frontend .
+COPY ./port_folio .
 
 EXPOSE 5173
 CMD ["npm", "run", "dev"]
