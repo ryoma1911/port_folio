@@ -18,6 +18,7 @@ const skills = [
     title: 'Blue Prism',
     level: '経験：6年',
     description: 'RPAツールの一つ。これを活用した業務自動化を現職では行なっています。<br />VBA,Web APIの連携も可能でパフォーマンスや運用コストの削減も経験。',
+    background: '/images/SSC-blueprism-2col-logo-rgb-updated-whitespace.svg',
   },
   {
     title: 'Go / Python',
