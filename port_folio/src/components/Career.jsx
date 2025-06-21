@@ -10,7 +10,7 @@ const careerData = [
       '各支店からのヘルプデスク対応',
       '日々のシステム運用監視'
     ],
-    comment: '既存システムの運用保守を担当。手作業部分の繋ぎ業務なども担い、2020年7月以降の自動化案件に役立つ知見を得ました。'
+    comment: '既存システムの運用保守を担当。<br />手作業部分の繋ぎ業務なども担い、2020年7月以降の自動化案件に役立つ知見を得ました。'
   },
   {
     year: '2020/2〜2020/6',
@@ -22,7 +22,7 @@ const careerData = [
       'Blue Prismを用いた定型業務の自動化開発',
       '業務ヒアリングとプロセス設計'
     ],
-    comment: '社内初のRPA導入で基本設計〜テストまで一通り経験。後続の大型案件の基礎スキルをこの時期に習得しました。'
+    comment: '社内初のRPA導入で基本設計〜テストまで一通り経験。<br />後続の大型案件の基礎スキルをこの時期に習得しました。'
   },
   {
     year: '2020/7〜2025（現在）',
@@ -38,7 +38,8 @@ const careerData = [
       'カード審査結果PDFの自動ダウンロードと保存処理の実装',
       '年2回の自動化リリース対応および定期メンテナンス'
     ],
-    comment: 'RPA導入プロジェクトにおいて、要件定義から運用保守まで全工程を一貫して対応。定期的な自動化リリースのほか、障害時の迅速なエラー対応や、処理時間の短縮に向けた改善提案なども実施。安定稼働と継続的な業務改善に貢献しました。'
+    comment: ['RPA導入プロジェクトにおいて、要件定義から運用保守まで全工程を一貫して対応。<br />定期的な自動化リリースのほか、障害時の迅速なエラー対応や、処理時間の短縮に向けた改善提案なども実施。<br />安定稼働と継続的な業務改善に貢献しました。'
+    ]
   },
   {
     year: '2024年10月〜現在',
@@ -54,7 +55,7 @@ const careerData = [
       'JSON形式での試合データ配信機能の実装',
       '今後の追加予定：選手別成績の取得・表示機能'
     ],
-    comment: '日本のプロ野球における情報提供の選択肢が限られる中で、独自に設計・構築を試みた初のフルスタック開発プロジェクトです。Go・Docker・AWSを用いた実践的なスキル習得とアウトプットに挑戦しました。'
+    comment: '日本のプロ野球における情報提供の選択肢が限られる中で、独自に設計・構築を試みた初のフルスタック開発プロジェクトです。<br />Go・Docker・AWSを用いた実践的なスキル習得とアウトプットに挑戦しました。'
   }
 ];
 
@@ -72,13 +73,16 @@ const Career = () => (
             <p><strong>【プロジェクト概要】</strong><br />{item.project}</p>
             <p><strong>【担当フェーズ】</strong><br />{item.phase}</p>
             <p><strong>【業務内容】</strong><br />
-              <ul>
-                {item.tasks.map((task, i) => (
-                  <li key={i}>{task}</li>
-                ))}
-              </ul>
+            <ul>
+              {item.tasks.map((task, i) => (
+                <li key={i}>{task}</li>
+              ))}
+            </ul>
             </p>
-            <p><strong>《コメント／アピールポイント》</strong><br />{item.comment}</p>
+            <p>
+              <strong>《コメント／アピールポイント》</strong><br />
+              <span dangerouslySetInnerHTML={{ __html: item.comment }} />
+            </p>
           </div>
         </div>
       ))}
@@ -103,14 +107,16 @@ const styles = {
   },
   cardContainer: {
     display: 'grid',
-    gridTemplateColumns: '1fr 1fr',
+    gridTemplateColumns: '1fr',
     gap: '2rem',
   },
   card: {
+    color: '#0f172a',
     backgroundColor: '#ffffff',
+    display: 'grid',
     padding: '1.5rem 2rem',
     borderRadius: '1rem',
-    boxShadow: '0 4px 12px rgba(0, 0, 0, 0.08)',
+    boxShadow: '0 5px 15px rgba(0, 0, 0, 0.1)',
     transition: 'transform 0.3s ease',
   },
   cardTitle: {

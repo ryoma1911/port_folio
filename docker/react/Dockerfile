@@ -9,5 +9,7 @@ RUN npm install
 
 COPY ./port_folio .
 
+RUN npm install react-icons
+
 EXPOSE 5173
 CMD ["npm", "run", "dev"]

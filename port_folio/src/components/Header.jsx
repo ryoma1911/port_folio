@@ -7,7 +7,7 @@ const Header = () => {
                     <ul style={styles.navList}>
                         <li><a href="#about">About</a></li>
                         <li><a href="#skills">Skills</a></li>
-                        <li><a href="#skills">Career</a></li>
+                        <li><a href="#career">Career</a></li>
                         <li><a href="#works">Works</a></li>
                         <li><a href="#contact">Contact</a></li>
                     </ul>
@@ -22,10 +22,11 @@ const styles = {
     position: "sticky",
     top: 0,
     width: "100%",
-    backgroundColor: '#333',
+    backgroundColor: 'f333',
     color: "#fff",
     padding: "1rem 0",
     zIndex: 1000,
+    backgroundColor: "#333",
   },
   container: {
     maxWidth: "960px",
@@ -38,7 +39,6 @@ const styles = {
   logo: {
     margin: 0,
     fontSize: "1.5rem",
-    
   },
   navList: {
     listStyle: "none",

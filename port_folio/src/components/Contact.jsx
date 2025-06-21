@@ -1,5 +1,5 @@
 import React from 'react';
-import { FaXTwitter, FaGithub } from 'react-icons/fa';
+import { FaXTwitter, FaGithub } from 'react-icons/fa6';
 import { SiQiita } from 'react-icons/si';
 
 const contactLinks = [
@@ -11,7 +11,7 @@ const contactLinks = [
   {
     name: 'Qiita',
     url: 'https://qiita.com/ryoma1911',
-    icon: <SiQiita size={40} />,
+    icon: <SiQiita size={50} />,
   },
   {
     name: 'GitHub',

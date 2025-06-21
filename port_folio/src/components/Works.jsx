@@ -3,7 +3,7 @@ import React from 'react';
 const works = [
     {
         title: '野球速報API',
-        description: 'Goで開発したプロ野球速報を取得するREST API。スクレイピングで情報収集し、JSON形式で提供します。',
+        description: 'Goで開発したプロ野球速報を取得するREST API。<br />スクレイピングで情報収集し、JSON形式で提供します。',
         github: 'https://github.com/ryoma1911/bb_api',
     },
     {
@@ -13,20 +13,22 @@ const works = [
     },
     {
       title: 'ポートフォリオサイト',
-      description: 'Reactを使用し、作成してみました。成果物をGithubに格納しています',
+      description: 'Reactを使用し、作成してみました。<br />成果物をGithubに格納しています',
       github: 'https://github.com/ryoma1911/portfolio',
     },
 ];
 
 const Works = () => (
-<section style={styles.section} id="portfolio">
+<section style={styles.section} id="works">
     <div style={styles.inner}>
         <h2 style={styles.heading}>Works - 成果物</h2>
         <div style={styles.cardContainer}>
         {works.map((work, index) => (
         <div key={index} style={styles.card} className="fade-in">
             <h3 style={styles.cardTitle}>{work.title}</h3>
-            <p style={styles.cardDescription}>{work.description}</p>
+            <p style={styles.cardDescription}>
+              <span dangerouslySetInnerHTML={{ __html: work.description }} />
+            </p>
             <a
                 href={work.github}
                 target="_blank"
