@@ -1,0 +1,16 @@
+.cardContainer {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+
+/* モバイル用に1列に変更 */
+@media (max-width: 768px) {
+  .cardContainer {
+    grid-template-columns: 1fr;
+  }
+
+  .timeline-item {
+    margin-bottom: 2rem;
+  }
+}
