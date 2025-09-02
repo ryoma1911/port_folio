@@ -4,6 +4,13 @@
   gap: 2rem;
 }
 
+.container {
+  max-width: 1200px;  /* 画面に合わせて広がる */
+  width: 100%;
+  margin: 0 auto;
+}
+
+
 /* モバイル用に1列に変更 */
 @media (max-width: 768px) {
   .cardContainer {
