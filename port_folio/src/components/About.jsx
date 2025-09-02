@@ -5,13 +5,13 @@ const About = () => (
       <div style={styles.content}>
         <div style={styles.textContainer} className="fade-in">
           <p style={styles.text}>
-            初めまして、1996年生まれのITエンジニア、アオベと申します。社会人歴は7年目になります。
+            初めまして、1996年生まれのITエンジニア、アオベと申します。
           </p>
           <p style={styles.text}>
-            新卒で都内中小のソフトハウスに入社し、SES事業部に配属されました。<br />
+            新卒で都内中小ITに入社し、SES事業部に配属。<br />
             最初の現場では運用監視オペレータを約1年間担当。<br />
-            その後はRPAを活用した業務自動化開発に携わっています。<br />
-            要件定義から運用保守まで、幅広い工程を経験させていただきました。
+            その後はRPA,VBAを活用した各種業務自動化開発に携わっています。<br />
+            要件定義から運用保守まで、幅広い工程を経験。
           </p>
           <p style={styles.text}>
             一方で、独学で他言語の開発を学ぶ中で<br />
